@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-3">Trip Planner</h3>
+<form method="post" class="mb-4">
+  <div class="mb-3">
+    <label class="form-label">Trip name</label>
+    <input name="trip_name" class="form-control" required>
+  </div>
+  <div class="row g-2 mb-3">
+    <div class="col"><label>Start date</label><input type="date" name="start_date" class="form-control"></div>
+    <div class="col"><label>End date</label><input type="date" name="end_date" class="form-control"></div>
+  </div>
+  <div class="mb-3">
+    <label>Select monasteries</label>
+    <select name="monasteries" multiple class="form-select">
+      {% for m in monasteries %}
+      <option value="{{ m.id }}">{{ m.name }} — {{ m.location }}</option>
+      {% endfor %}
+    </select>
+    <small class="text-muted">Use ctrl/cmd+click to select multiple.</small>
+  </div>
+  <div class="mb-3">
+    <label>Preferences</label>
+    <textarea name="preferences" class="form-control"></textarea>
+  </div>
+  <button class="btn btn-accent">Save Plan</button>
+</form>
+
+<h5>Your recent plans</h5>
+{% if plans %}
+<ul class="list-group">
+  {% for p in plans %}
+  <li class="list-group-item">
+    <strong>{{ p.trip_name }}</strong> — {{ p.start_date }} to {{ p.end_date }}
+    <div class="small text-muted">Monasteries: {{ p.monasteries_selected }}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="text-muted">No plans yet.</p>
+{% endif %}
+{% endblock %}

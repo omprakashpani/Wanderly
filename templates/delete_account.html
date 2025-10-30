@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h4 class="mb-3 text-danger">Delete Account</h4>
+      <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+      <form method="post">
+        <button class="btn btn-danger">Yes, delete my account</button>
+        <a class="btn btn-secondary ms-2" href="{{ url_for('home') }}">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

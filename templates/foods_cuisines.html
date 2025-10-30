@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-3">Foods & Souvenirs</h3>
+<div class="row">
+
+  <div class="col-md-6">
+    <h5>Foods</h5>
+    <div class="row g-3">
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/momo.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">MOMOS</h6>
+            <p class="small">Steamed dumplings with meat or vegetarian fillings, served with spicy chutney.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/thukpa.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">THUKPA</h6>
+            <p class="small">Nutritious noodle soup made with hand-pulled noodles, veggies, and meat/tofu.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/phagspa.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">PHAGSAPA</h6>
+            <p class="small">Pork fat strips stewed with radishes and dried chilies, a spicy local specialty.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/gundruk_sinki.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">GUNDRUK & SINKI</h6>
+            <p class="small">Fermented greens and radish roots used in soups and pickles for tangy flavor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/kinema.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">KINEMA</h6>
+            <p class="small">Fermented soybean dish rich in protein, usually served with rice.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/sha_phaley.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">SHA PHALEY</h6>
+            <p class="small">Deep-fried bread stuffed with minced meat and cabbage, crispy and filling.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/sel_roti.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">SEL ROTI</h6>
+            <p class="small">Traditional Nepalese sweet rice bread, ring-shaped, crispy and delicious.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/pickles.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">SPICES & PICKLES</h6>
+            <p class="small">Local black cardamom, Dalle chili pickles, and organic spice blends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/churpi.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">CHURPI</h6>
+            <p class="small">Local hard cheese used in soups, nutritious and rich in protein.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h5>Souvenirs</h5>
+    <div class="row g-3">
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/thangka.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Thangka Paintings</h6>
+            <p class="small">Buddhist scroll paintings made on silk or cotton with sacred motifs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/prayer_flag.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Prayer Flags</h6>
+            <p class="small">Colorful flags representing five elements, spreading peace and compassion.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/carpet.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Tibetan Carpets</h6>
+            <p class="small">Handwoven carpets with dragon and floral motifs, durable and elegant.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/cravings.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Handicrafts</h6>
+            <p class="small">Wooden masks, Choktse tables, and bamboo crafts by local artisans.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/tea.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Sikkim Tea</h6>
+            <p class="small">Temi Tea Garden’s premium teas—perfect for gifting and savoring.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/spices.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Organic Spices</h6>
+            <p class="small">Black cardamom, ginger, turmeric, and fiery Dalle chili pickles.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/jwellery.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Traditional Attire & Jewelry</h6>
+            <p class="small">Handwoven jackets and jewelry made with silver and semi-precious stones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='images/bowls.jpg') }}" class="card-img-top" style="height:140px; object-fit:cover;">
+          <div class="card-body">
+            <h6 class="card-title">Singing Bowls</h6>
+            <p class="small">Used for meditation and relaxation, also prayer wheels for blessings.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

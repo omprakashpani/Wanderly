@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-3">Monasteries</h3>
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/rumtek.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Rumtek Dharma Chakra Centre</h5>
+        <p class="small text-muted">Rumtek, Gangtok, East Sikkim</p>
+        <p class="small">The Rumtek Dharma Chakra Centre in Sikkim is a major Buddhist monastery, known for its sacred relics, vibrant murals, and as a key seat of the Kagyu tradition.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/pemayangtse.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Pemayangtse Monastery</h5>
+        <p class="small text-muted">Pelling, West Sikkim</p>
+        <p class="small">Pemayangtse Monastery, near Pelling in Sikkim, is one of the oldest Nyingma monasteries, known for its serene setting, ancient art, and stunning Kanchenjunga views.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/phodong.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Phodong Monastery</h5>
+        <p class="small text-muted">Phodong, North Sikkim</p>
+        <p class="small">Phodong Monastery, located in North Sikkim, is a major Buddhist monastery of the Karma Kagyu sect. Built in the 18th century, it is famous for its vibrant murals, peaceful surroundings, and annual Cham masked dances.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/phensang.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Phensang Monastery</h5>
+        <p class="small text-muted">Phensang, North Sikkim</p>
+        <p class="small">Phensang Monastery, in North Sikkim, belongs to the Nyingma sect and is known for its scenic location, colorful festivals, and annual Cham dances that draw many visitors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/kartok.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Kartok Monastery</h5>
+        <p class="small text-muted">Kartok Lake, Yuksom, West Sikkim</p>
+        <p class="small">Kartok Monastery, situated near Yuksom in West Sikkim, is a small yet beautiful monastery of the Nyingma sect. Surrounded by tranquil landscapes and a serene lake, it is known for its peaceful ambiance and spiritual charm.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='images/Gonjang.jpeg') }}" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5>Gonjang Monastery</h5>
+        <p class="small text-muted">Tashi Viewpoint, Gangtok, East Sikkim</p>
+        <p class="small">Gonjang Monastery, near Gangtok in Sikkim, was established in 1981 and follows the Nyingma tradition. It is admired for its vibrant architecture, Buddhist teachings, and the serene atmosphere it offers to visitors.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
