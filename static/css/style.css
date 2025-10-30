@@ -1,0 +1,495 @@
+
+
+
+
+:root {
+  /* Spiritual & Natural Color Palette */
+  --primary: #8B4513; /* Saddlebrown - monastery robes */
+  --secondary: #CD853F; /* Peru - golden temples */
+  --accent: #FF6B35; /* Orange red - prayer flags */
+  --success: #2E8B57; /* Sea green - mountain nature */
+  --info: #4682B4; /* Steel blue - mountain skies */
+  --warning: #DAA520; /* Goldenrod - golden buddhas */
+  --danger: #DC143C; /* Crimson */
+  
+  /* Neutral tones */
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --medium-gray: #6C757D;
+  --dark-gray: #343A40;
+  --cream: #FFF8DC; /* Cornsilk - prayer paper color */
+  --stone: #D2B48C; /* Tan - stone monastery walls */
+  
+  /* Background gradients */
+  --bg-gradient: linear-gradient(135deg, #FFF8DC 0%, #F0E68C 50%, #DDD 100%);
+  --hero-gradient: linear-gradient(135deg, rgba(139,69,19,0.9) 0%, rgba(205,133,63,0.8) 100%);
+  --card-shadow: 0 8px 32px rgba(139, 69, 19, 0.1);
+  --hover-shadow: 0 12px 40px rgba(139, 69, 19, 0.15);
+  
+  /* Typography */
+  --font-primary: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: var(--font-primary);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  border-radius: 2px;
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--accent) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--dark-gray) !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  background-color: rgba(139, 69, 19, 0.05);
+  transform: translateY(-1px);
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover:before {
+  width: 80%;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  text-transform: none;
+  font-size: 0.95rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  color: var(--white);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  background: var(--hero-gradient), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path d="M0,100 Q250,50 500,100 T1000,100 L1000,200 L0,200 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: cover;
+  color: var(--white);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+
+/* Cards */
+.card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: var(--white);
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139,69,19,0.02) 0%, rgba(205,133,63,0.02) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-img-top {
+  transition: all 0.5s ease;
+  border-radius: 0;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--medium-gray);
+  line-height: 1.6;
+}
+
+/* Carousel */
+.carousel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+}
+
+.carousel-item img {
+  border-radius: 0;
+  filter: brightness(0.8);
+  transition: all 0.5s ease;
+}
+
+.carousel-item.active img {
+  filter: brightness(1);
+}
+
+.carousel-caption {
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption h5 {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 2px solid #E9ECEF;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.15);
+  background: var(--white);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Authentication Cards */
+.card.p-4 {
+  background: rgba(255, 255, 255, 0.15);  /* Transparent white background */
+  backdrop-filter: blur(15px);             /* Glass morphism blur effect */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(139, 69, 19, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);  /* Subtle white border */
+  transition: all 0.3s ease;
+}
+
+.card.p-4:hover {
+  background: rgba(255, 255, 255, 0.2);   /* Slightly more opaque on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 15px 50px rgba(139, 69, 19, 0.25);
+}
+
+/* List Groups */
+.list-group-item {
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(5px);
+  background: rgba(139, 69, 19, 0.02);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 12px;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(70, 130, 180, 0.1), rgba(70, 130, 180, 0.05));
+  color: var(--info);
+  border-left: 4px solid var(--info);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, var(--primary), var(--dark-gray));
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  font-weight: 500;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+
+/* Container */
+.container-lg {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Utility Classes */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .d-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading Animation */
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects for Interactive Elements */
+a:not(.btn):not(.nav-link) {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:not(.btn):not(.nav-link):hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Special styling for monastery/spiritual elements */
+.monastery-card {
+  border-left: 4px solid var(--secondary);
+}
+
+.spiritual-icon {
+  color: var(--warning);
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.card::before {
+  pointer-events: none;
+}
+.hero::before {
+  pointer-events: none;
+}
